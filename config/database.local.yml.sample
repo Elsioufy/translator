@@ -1,0 +1,15 @@
+development:
+  <<: *default
+  database: phraseapp_development
+  username: phraseapp
+  password:
+  host: localhost
+  pool: 15
+
+test:
+  <<: *default
+  database: phraseapp_test
+  username: phraseapp
+  password:
+  host: localhost
+  pool: 15
