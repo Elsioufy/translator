@@ -23,6 +23,15 @@ gem 'sassc-rails', '>= 2.0.0'
 # A gem to automate using jQuery with Rails
 gem 'jquery-rails'
 
+# Rails observer
+gem 'rails-observers'
+
+# Tabbed interface and custom field type for globalize translations for Rails_admin
+gem 'rails_admin_globalize_field'
+
+# Pagination library for Rails, Sinatra, Merb, DataMapper, and more
+gem 'will_paginate', '~> 3.1.0'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
