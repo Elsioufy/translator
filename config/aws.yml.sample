@@ -1,0 +1,14 @@
+# Rename this file to aws.yml
+development: &development
+  region: us-east-1
+  access_key_id: 'YourAccessKey'
+  secret_access_key: 'YourSecretKey'
+
+test:
+  <<: *development
+
+staging:
+  <<: *development
+
+production:
+  <<: *development

@@ -48,6 +48,10 @@ gem 'carrierwave'
 # mini replacement for RMagick
 gem 'mini_magick'
 
+# Official AWS Ruby gem for Amazon Translate. This gem is part of the AWS SDK for Ruby.
+gem 'aws-sdk-translate', '~> 1.0'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
