@@ -1,0 +1,17 @@
+.navbar-phraseapp {
+  background: $light_blue;
+}
+
+.navbar-phraseapp {
+  .navbar-nav {
+    li>a {
+      color: white;
+      &:hover {
+        background: inherit;
+      }
+    }
+    li.active>a {
+      background: $dark_blue;
+    }
+  }
+}

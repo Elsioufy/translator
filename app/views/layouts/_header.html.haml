@@ -1,0 +1,24 @@
+// Header HTML
+.navbar.navbar-phraseapp
+  .navbar-header
+    = link_to root_path, class: 'navbar-brand' do
+      // Copyright logo to Phraseapp company (Used for this task only)
+      = image_tag 'phraseapp.png', class: 'phraseapp-logo', alt: 'logo', height: '20'
+    .navbar-buttons
+      %button.navbar-toggle.navbar-light{type: 'button', "data-toggle" => 'collapse', "data-target" => "#navbar_content"}
+        %span.sr-only
+          Toggle navigation
+        %i.fa.fa-align-justify
+  .collapse.navbar-collapse#navbar_content
+    %ul.nav.navbar-nav.navbar-left
+      %li.nav-item.active
+        = link_to '/', class: 'nav-link' do
+          %span.sr-only
+            (current)
+          Articles
+    %ul.nav.navbar-nav.navbar-right  
+      %li.nav-item
+        = link_to '/', class: '' do
+          %span.sr-only
+            (current)
+          Deutsch

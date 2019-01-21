@@ -15,6 +15,14 @@ gem 'rails_admin', '~> 1.3'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+
+# Official Sass port of Bootstrap 2 and 3.
+gem 'bootstrap-sass', '~> 3.4.0'
+gem 'sassc-rails', '>= 2.0.0'
+
+# A gem to automate using jQuery with Rails
+gem 'jquery-rails'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
@@ -41,6 +49,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Ckeditor integration gem for rails
 gem 'ckeditor'
 
+# Rails I18n de-facto standard library for ActiveRecord model/data translation.
+gem 'globalize'
 
 # Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks
 gem 'carrierwave'
