@@ -18,28 +18,28 @@ RailsAdmin.config do |config|
   end
   config.model Article do
     edit do
-      field :title, :ck_editor
-      field :body, :ck_editor
+      field :question, :ck_editor
+      field :answer, :ck_editor
     end
     list do
-      field :title do
+      field :question do
         pretty_value do
           value.html_safe
         end
       end
-      field :body do
+      field :answer do
         pretty_value do
           value.html_safe
         end
       end
     end
     show do
-      field :title do
+      field :question do
         pretty_value do
           value.html_safe
         end
       end
-      field :body do
+      field :answer do
         pretty_value do
           value.html_safe
         end

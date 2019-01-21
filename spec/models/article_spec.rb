@@ -1,34 +1,34 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-  context 'Title is not valid' do
-    context 'Title is empty' do
+  context 'Question is not valid' do
+    context 'Question is empty' do
       it 'should not save the article' do
-        expect(build :article, title: '').not_to be_valid
+        expect(build :article, question: '').not_to be_valid
       end
     end
-    context 'Title is not unique' do
+    context 'Question is not unique' do
       it 'should not save the article' do
-        create(:article, title: 'Title')
-        expect(build :article, title: 'Title').not_to be_valid
+        create(:article, question: 'Question?')
+        expect(build :article, question: 'Question?').not_to be_valid
       end
     end
   end
 
-  context 'Body is not valid' do
-    context 'Body is empty' do
+  context 'Answer is not valid' do
+    context 'Answer is empty' do
       it 'should not save the article' do
-        expect(build :article, body: '').not_to be_valid
+        expect(build :article, answer: '').not_to be_valid
       end
     end
-    context 'Body is not unique' do
-      it 'should not save the article' do
-        create(:article, body: 'Body')
-        expect(build :article, body: 'Body').not_to be_valid
+    context 'Answer is not unique' do
+      it 'Answer not save the article' do
+        create(:article, answer: 'Answer')
+        expect(build :article, answer: 'Answer').not_to be_valid
       end
     end
   end
-  context 'Title and Body are valid' do
+  context 'Question and Answer are valid' do
     it 'should save the article' do
       expect(create(:article)).to be_valid
       expect{create(:article)}.to change { Article.count }.by(1)
