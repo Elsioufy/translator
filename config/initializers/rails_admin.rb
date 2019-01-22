@@ -24,27 +24,27 @@ RailsAdmin.config do |config|
       field :answer, :ck_editor
     end
     list do
-      field :en_question do
+      field :question_en do
         label 'Question in English'
         pretty_value do
           value.html_safe if value.present?
         end
       end
-      field :en_answer do
+      field :answer_en do
         label 'Answer in English'
         pretty_value do
           value.html_safe if value.present?
         end
       end
 
-      field :de_question do
+      field :question_de do
         label 'Question in German'
         pretty_value do
           value.html_safe if value.present?
         end
       end
 
-      field :de_answer do
+      field :answer_de do
         label 'Answer in German'
         pretty_value do
           value.html_safe if value.present?
@@ -54,27 +54,27 @@ RailsAdmin.config do |config|
       field :updated_at
     end
     show do
-      field :en_question do
+      field :question_en do
         label 'Question in English'
         pretty_value do
           value.html_safe if value.present?
         end
       end
-      field :en_answer do
+      field :answer_en do
         label 'Answer in English'
         pretty_value do
           value.html_safe if value.present?
         end
       end
 
-      field :de_question do
+      field :question_de do
         label 'Question in German'
         pretty_value do
           value.html_safe if value.present?
         end
       end
 
-      field :de_answer do
+      field :answer_de do
         label 'Answer in German'
         pretty_value do
           value.html_safe if value.present?

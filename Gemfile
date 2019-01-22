@@ -23,6 +23,9 @@ gem 'sassc-rails', '>= 2.0.0'
 # A gem to automate using jQuery with Rails
 gem 'jquery-rails'
 
+# Easily access (read and write) globalize translated fields without fiddling with locale
+gem 'globalize-accessors'
+
 # Rails observer
 gem 'rails-observers'
 
