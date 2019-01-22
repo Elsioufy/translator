@@ -1,4 +1,4 @@
-- cache "#{I18n.locale.to_s} #{@article}" do
+- cache([@article, locale: I18n.locale]) do
   .container
     .row
       .col-xs-12

@@ -1,11 +1,11 @@
 %h1
   = t('articles')
-- cache "#{I18n.locale.to_s} #{@articles}" do
+- cache([@articles, locale: I18n.locale]) do
   #all
     #content
       .container
         .col-sm-12.article-listing
           - @articles.each do |article|
-            - cache "#{I18n.locale.to_s} #{article}" do
+            - cache([article, locale: I18n.locale]) do
               = render article
         = will_paginate @articles
