@@ -1,4 +1,4 @@
-# Following DDD, Article repository is used to set and get our article
+# Following DDD, Article repository is used to set and get our article since it has interaction with our translations
 class ArticleRepository
   # Initializing our article
   def initialize(article)

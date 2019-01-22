@@ -16,4 +16,6 @@
 //= require activestorage
 //= require turbolinks
 //= require ckeditor/init
+//= require rails-timeago
+//= require rails-timeago-all
 //= require_tree .

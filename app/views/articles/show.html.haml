@@ -1,14 +1,17 @@
-.container
-  .row
-    .col-xs-12
-      .card.mb-4
-        .card-body
-          .card-time
-            = datetime_ago(@article.updated_at)
-          // Article Question
-          .card-title.card-question
-            = raw @article.question
-          %hr
-          // Article Answer
-          .card-text.card-answer
-            = raw @article.answer
+- cache "#{I18n.locale.to_s} #{@article}" do
+  .container
+    .row
+      .col-xs-12
+        .card.mb-4
+          .card-body
+            .card-time
+              %span
+                = t('updated')
+              = datetime_ago(@article.updated_at)
+            // Article Question
+            .card-title.card-question
+              = raw @article.question
+            %hr
+            // Article Answer
+            .card-text.card-answer
+              = raw @article.answer

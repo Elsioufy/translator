@@ -1,5 +1,8 @@
 module ApplicationHelper
   def datetime_ago(datetime)
-    t('updated') + ' ' + time_ago_in_words(datetime) + ' ' + t('ago')
+    begin
+      timeago_tag datetime, :nojs => true, :lang => I18n.locale
+    # rescue
+    end
   end
 end

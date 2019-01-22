@@ -23,6 +23,9 @@ gem 'sassc-rails', '>= 2.0.0'
 # A gem to automate using jQuery with Rails
 gem 'jquery-rails'
 
+# A Rails helper for time tags that can be used with the jQuery Timeago plugin.
+gem 'rails-timeago', '~> 2.0'
+
 # Easily access (read and write) globalize translated fields without fiddling with locale
 gem 'globalize-accessors'
 
@@ -42,7 +45,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

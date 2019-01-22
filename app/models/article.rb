@@ -1,7 +1,7 @@
 # Article model, each article has set of translations
 class Article < ApplicationRecord
   # Attrs we want to translate
-  translates :question, :answer
+  translates :question, :answer, touch: true
   # Validates article question and answer to be present and unique
   validates :question, :answer, presence: true, uniqueness: true
   # Each article has nested attributes for translations
@@ -10,6 +10,11 @@ class Article < ApplicationRecord
   self.per_page = 10
   # Used for easy and better access of translation attributes
   globalize_accessors
+  scope :recent, -> { includes(:translations).order(updated_at: :desc)}
+
+  def self.recent_articles(page_no = 1)
+    Article.recent.paginate(page: page_no)
+  end
 
   # Used since we would observe the english translation itself which has the content of our attributes
   class Translation

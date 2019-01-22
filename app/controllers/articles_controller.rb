@@ -4,6 +4,6 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.paginate(page: params[:page])
+    @articles = Article.recent_articles(params[:page])
   end
 end
