@@ -1,19 +1,5 @@
 module ApplicationHelper
-
-  def switch_language_path
-    if I18n.locale == :en
-      "/de"
-    else
-      '/en'
-    end
-  end
-
-  def switch_language_name
-    if I18n.locale == :en
-      t('de')
-    else
-      t('en')
-    end
-
+  def datetime_ago(datetime)
+    t('updated') + ' ' + time_ago_in_words(datetime) + ' ' + t('ago')
   end
 end

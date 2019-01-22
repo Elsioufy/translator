@@ -5,7 +5,7 @@
         - @articles.each do |article|
           .post
             .time
-              #{t('updated')} #{time_ago_in_words(article.updated_at)} #{t('ago')}
+              = datetime_ago(article.updated_at)
             %br
             .question
               = raw article.question

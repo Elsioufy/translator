@@ -4,7 +4,7 @@
       .card.mb-4
         .card-body
           .card-time
-            #{t('updated')} #{time_ago_in_words(@article.updated_at)} #{t('ago')}
+            = datetime_ago(@article.updated_at)
           // Article Question
           .card-title.card-question
             = raw @article.question
