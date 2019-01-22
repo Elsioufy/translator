@@ -26,9 +26,6 @@ gem 'jquery-rails'
 # Rails observer
 gem 'rails-observers'
 
-# Tabbed interface and custom field type for globalize translations for Rails_admin
-gem 'rails_admin_globalize_field'
-
 # Pagination library for Rails, Sinatra, Merb, DataMapper, and more
 gem 'will_paginate', '~> 3.1.0'
 

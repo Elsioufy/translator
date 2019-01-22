@@ -19,7 +19,69 @@ RailsAdmin.config do |config|
   end
   config.model Article do
     edit do
-      configure :translations, :globalize_tabs
+      # configure :translations, :globalize_tabs
+      field :question, :ck_editor
+      field :answer, :ck_editor
+    end
+    list do
+      field :en_question do
+        label 'Question in English'
+        pretty_value do
+          value.html_safe if value.present?
+        end
+      end
+      field :en_answer do
+        label 'Answer in English'
+        pretty_value do
+          value.html_safe if value.present?
+        end
+      end
+
+      field :de_question do
+        label 'Question in German'
+        pretty_value do
+          value.html_safe if value.present?
+        end
+      end
+
+      field :de_answer do
+        label 'Answer in German'
+        pretty_value do
+          value.html_safe if value.present?
+        end
+      end
+      field :created_at
+      field :updated_at
+    end
+    show do
+      field :en_question do
+        label 'Question in English'
+        pretty_value do
+          value.html_safe if value.present?
+        end
+      end
+      field :en_answer do
+        label 'Answer in English'
+        pretty_value do
+          value.html_safe if value.present?
+        end
+      end
+
+      field :de_question do
+        label 'Question in German'
+        pretty_value do
+          value.html_safe if value.present?
+        end
+      end
+
+      field :de_answer do
+        label 'Answer in German'
+        pretty_value do
+          value.html_safe if value.present?
+        end
+      end
+      field :created_at
+      field :updated_at
     end
   end
 
@@ -31,29 +93,34 @@ RailsAdmin.config do |config|
     show do
       field :question do
         pretty_value do
-          value.html_safe
+          value.html_safe if value.present?
         end
       end
       field :answer do
         pretty_value do
-          value.html_safe
+          value.html_safe if value.present?
         end
       end
+      field :created_at
+      field :updated_at
+      field :locale
     end
     list do
       field :question do
         pretty_value do
-          value.html_safe
+          value.html_safe if value.present?
         end
       end
       field :answer do
         pretty_value do
-          value.html_safe
+          value.html_safe if value.present?
         end
       end
+      field :created_at
+      field :updated_at
+      field :locale
     end
-    include_fields :locale, :question, :answer
   end
-  config.included_models = ['Article','Article::Translation']
-  I18n.available_locales = [:en, :de]
+  config.included_models = ['Article', 'Article::Translation']
+  # I18n.available_locales = [:en, :de]
 end

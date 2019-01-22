@@ -4,6 +4,7 @@ class ArticleRepository
   end
 
   def save_translated(attrs, lang)
+    puts "Attrs are: #{attrs}"
     lang_article = @article.translations.with_locale(lang.to_sym).first_or_create!
     attrs.each do |key, value|
       lang_article[key] = value
