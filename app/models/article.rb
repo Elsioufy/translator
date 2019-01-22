@@ -2,6 +2,7 @@
 class Article < ApplicationRecord
   # Attrs we want to translate
   translates :question, :answer
+  # Validates article question and answer to be present and unique
   validates :question, :answer, presence: true, uniqueness: true
   # Each article has nested attributes for translations
   accepts_nested_attributes_for :translations, allow_destroy: true

@@ -1,3 +1,4 @@
+# Our rails admin configuration
 RailsAdmin.config do |config|
   config.authorize_with do
     authenticate_or_request_with_http_basic('Please login to Phrase App') do |username, password|
@@ -7,8 +8,8 @@ RailsAdmin.config do |config|
   config.main_app_name = ["Phraseapp", "BackOffice"]
   config.parent_controller = '::RailsAdminLocaleController'
   config.actions do
-    dashboard                     # mandatory
-    index                         # mandatory
+    dashboard
+    index
     new
     export
     bulk_delete
@@ -19,7 +20,6 @@ RailsAdmin.config do |config|
   end
   config.model Article do
     edit do
-      # configure :translations, :globalize_tabs
       field :question, :ck_editor
       field :answer, :ck_editor
     end
@@ -122,5 +122,4 @@ RailsAdmin.config do |config|
     end
   end
   config.included_models = ['Article', 'Article::Translation']
-  # I18n.available_locales = [:en, :de]
 end
