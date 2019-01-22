@@ -1,3 +1,4 @@
+# Observer to catch events/callbacks of Article, used for single responsibility and efficient testing.
 class ArticleObserver < ActiveRecord::Observer
   observe Article::Translation
 
