@@ -30,4 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  en: "English"
+  de: "German"
+  articles: "Articles"
+  read_more: 'Read more'
+  will_paginate:
+    previous_label: 'Previous'
+    next_label: "Next"
+    page_gap: "…"

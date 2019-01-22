@@ -1,0 +1,9 @@
+de:
+  en: "Englisch"
+  de: "Deutsch"
+  articles: "Artikel"
+  read_more: 'Weiterlesen'
+  will_paginate:
+    previous_label: 'Früher'
+    next_label: "Nächste"
+    page_gap: "…"

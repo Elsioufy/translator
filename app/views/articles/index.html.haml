@@ -1,1 +1,14 @@
-%h1 Getting Started
+#all
+  #contennt
+    .container
+      .col-sm-12.article-listing
+        - @articles.each do |article|
+          .post
+            .question
+              = raw article.question
+            %hr
+            .answer
+              = raw article.answer
+            .continue-reading
+              = link_to t('read_more'), article_path(article, locale: I18n.locale), class: 'btn btn-primary'
+        = will_paginate @articles

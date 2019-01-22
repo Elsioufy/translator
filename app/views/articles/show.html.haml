@@ -1,0 +1,12 @@
+.container
+  .row
+    .col-xs-12
+      .card.mb-4
+        .card-body
+          // Article Question
+          .card-title.card-question
+            = raw @article.question
+          %hr
+          // Article Answer
+          .card-text.card-answer
+            = raw @article.answer
