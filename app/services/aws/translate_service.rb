@@ -11,12 +11,12 @@ module Aws
           target_language_code: target_lang
         })
         return resp.translated_text
-      rescue
+      rescue Exception => e
         retries += 1
         if retries < MAX_RETRIES
           retry
         else
-          raise "Something went wrong while trying to translate in aws"
+          raise e
         end
       end
     end
