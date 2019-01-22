@@ -17,9 +17,12 @@
             (current)
           = t('articles')
 
-    %ul.nav.navbar-nav.navbar-right  
-      %li.nav-item
-        = link_to switch_language_path do
-          %span.sr-only
-            (current)
-          = switch_language_name
+    %ul.nav.navbar-nav.navbar-right
+      %li.nav-item.dropdown
+        %a.dropdown-toggle.btn{"data-toggle": "dropdown"}
+          = t(I18n.locale)
+          %span.caret
+        %ul.dropdown-menu.navbar-phraseapp
+          - I18n.available_locales.each do |lang|
+            %li
+              = link_to t(lang), root_path(locale: lang)

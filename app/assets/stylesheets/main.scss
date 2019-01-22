@@ -6,11 +6,11 @@
   .navbar-nav {
     li>a {
       color: white;
-      &:hover {
-        background: inherit;
+      &:hover, &:focus {
+        background: $dark_blue;
       }
     }
-    li.active>a {
+    li.active>a, li.open>a {
       background: $dark_blue;
     }
   }

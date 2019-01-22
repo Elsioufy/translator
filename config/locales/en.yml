@@ -38,3 +38,5 @@ en:
     previous_label: 'Previous'
     next_label: "Next"
     page_gap: "…"
+  ago: 'ago'
+  updated: 'Updated'
