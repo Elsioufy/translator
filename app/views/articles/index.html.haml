@@ -4,6 +4,9 @@
       .col-sm-12.article-listing
         - @articles.each do |article|
           .post
+            .time
+              Updated #{time_ago_in_words(article.updated_at)} Ago
+            %br
             .question
               = raw article.question
             %hr

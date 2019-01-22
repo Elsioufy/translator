@@ -1,19 +1,29 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.article-listing .post {
-  margin-bottom: 60px;
-  background: #fff;
-  margin: 0 0 30px;
-  border: solid 1px #e6e6e6;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 20px;
-  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+.article-listing {
+   .post {
+    margin-bottom: 60px;
+    background: #fff;
+    margin: 0 0 30px;
+    border: solid 1px #e6e6e6;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  }
+  .time {
+    text-align: right;
+    font-size: 12px;
+  }
+  .continue-reading {
+    text-align: right;
+  }
 }
 
-.continue-reading {
+.card-time {
   text-align: right;
+  font-size: 12px;
 }

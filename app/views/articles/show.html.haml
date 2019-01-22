@@ -3,6 +3,8 @@
     .col-xs-12
       .card.mb-4
         .card-body
+          .card-time
+            Updated #{time_ago_in_words(@article.updated_at)} Ago
           // Article Question
           .card-title.card-question
             = raw @article.question
