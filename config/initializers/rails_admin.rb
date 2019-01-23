@@ -1,10 +1,11 @@
 # Our rails admin configuration
 RailsAdmin.config do |config|
-  config.authorize_with do
-    authenticate_or_request_with_http_basic('Please login to Phrase App') do |username, password|
-      username == 'admin' && password == 'phraseAppDE2019'
-    end
-  end
+  # To easily run rails admin feature spec, we disabled basic authentication.
+  # config.authorize_with do
+  #   authenticate_or_request_with_http_basic('Please login to Phrase App') do |username, password|
+  #     username == 'admin' && password == 'phraseAppDE2019'
+  #   end
+  # end
   config.main_app_name = ["Phraseapp", "BackOffice"]
   config.parent_controller = '::RailsAdminLocaleController'
   config.actions do
