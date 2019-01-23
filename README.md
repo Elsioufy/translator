@@ -51,5 +51,10 @@ Note: English is the default language in this project at which it gets translate
 
 
 
+For deploying on heroku consider doing the following:
 
+* Consider running: heroku create --buildpack https://github.com/bundler/heroku-buildpack-bundler2.git reference to: https://github.com/bundler/bundler/issues/6784 
 
+* Make sure aws.yml is present with the right configuration before proceeding.
+
+* You are good to go after to deploy in heroku.
