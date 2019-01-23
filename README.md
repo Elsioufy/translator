@@ -10,7 +10,14 @@ This is a mini app called mini phraseapp at which it can manage and translate ar
 
 * Postgres database
 
-* Rails admin to manage articles
+
+## Services that is used:
+
+* Rails admin to manage the system
+
+* Amazon Translate
+
+* Redis for caching
 
 
 ## The steps to use phraseapp:
@@ -42,12 +49,14 @@ We have two views, one for the admin and one for the user/customer.
 
 The admin goes to `/admin` and the admin has the authority to manage articles (No authentication required)
 
-Users/Customers can go to our root path to view the articles.
+Users/Customers can go to home page to view the articles.
 
 The Admin can manage articles, initating a new article or updating it in english, it automatically gets translated in German and saves it in the database.
 
 The updated translation can be seen either in admin or home page after changing the language.
 
-For deploying on heroku consider doing the following:
+## Deployment
+
+For deploying on heroku:
 
 * Make sure `config/aws.yml` is present with the right configuration before proceeding.
