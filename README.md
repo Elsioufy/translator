@@ -43,18 +43,16 @@ The admin goes to http://localhost:3000/admin and he has the authority to manage
 
 Users/Customers can go to http://localhost:3000 to view the articles.
 
-The Admin can manage articles, initating a new article or updating it in english, it automatically gets translated in German and saves in the database.
+The Admin can manage articles, initating a new article or updating it in english, it automatically gets translated in German and saves it in the database.
 
 The updated translation can be seen either in rails admin or in localhost:3000 after changing the language.
 
-Note: English is the default language in this project at which it gets translated to other languages, any other language can not be translated to English.
+Note: English is the default language in this project at which it gets translated to other languages, any other language can not be translated to English for this release.
 
 
 
 For deploying on heroku consider doing the following:
 
-* Consider running: heroku create --buildpack https://github.com/bundler/heroku-buildpack-bundler2.git reference to: https://github.com/bundler/bundler/issues/6784 
-
 * Make sure aws.yml is present with the right configuration before proceeding.
 
-* You are good to go after to deploy in heroku.
+* You are good to go now
