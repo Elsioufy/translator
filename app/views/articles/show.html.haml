@@ -9,9 +9,9 @@
                 = t('updated')
               = datetime_ago(@article.updated_at)
             // Article Question
-            .card-title.card-question
+            .card-title.card-question#card-question
               = raw @article.question
             %hr
             // Article Answer
-            .card-text.card-answer
+            .card-text.card-answer#card-answer
               = raw @article.answer

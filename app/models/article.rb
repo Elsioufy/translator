@@ -10,10 +10,14 @@ class Article < ApplicationRecord
   self.per_page = 10
   # Used for easy and better access of translation attributes
   globalize_accessors
-  scope :recent, -> { includes(:translations).order(updated_at: :desc)}
+  # A scope to get recent articles
+  scope :recent, -> {order(updated_at: :desc)}
+  # A scope to include translations for N + 1 query issues
+  scope :include_translations, -> {includes(:translations)}
 
+  # Return recent articles in a specific page.
   def self.recent_articles(page_no = 1)
-    Article.recent.paginate(page: page_no)
+    Article.include_translations.recent.paginate(page: page_no)
   end
 
   # Used since we would observe the english translation itself which has the content of our attributes
