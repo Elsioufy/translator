@@ -1,4 +1,4 @@
-# Rename this file to aws.yml
+# Copy content to aws.yml to get started
 development: &development
   region: us-east-1
   access_key_id: 'YourAccessKey'
