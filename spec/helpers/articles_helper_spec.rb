@@ -1,15 +1,20 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the ArticlesHelper. For example:
-#
-# describe ArticlesHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
-RSpec.describe ArticlesHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe ArticlesHelper, type: :helper do
+  describe "Truncate article" do
+    context 'Text length is bigger than truncated characters' do
+      it 'Should truncate value' do
+        text = Faker::String.random(50)
+        number = 30
+        expect(article_truncate(text,number).length).to eq(number)
+      end
+    end
+    context 'Text length is smaller than truncated characters' do
+      it 'Should not truncate value' do
+        text = Faker::String.random(4)
+        number = 30
+        expect(article_truncate(text,number).length).to eq(text.length)
+      end
+    end
+  end
 end
