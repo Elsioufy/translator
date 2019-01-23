@@ -29,19 +29,21 @@ The steps to use phraseapp:
 
 * rails db:create and rails db:migrate
 
-* run sidekiq and redis
+* run redis (Make sure you have the correct configuration setup in development/staging or production.rb) (Defaults to localhost)
+
+* Cached is being used in development (Make sure to change it to config.action_controller.perform_caching = false in development.rb in case you want to disable it)
 
 * You are good to go to run the server
 
 
-We have now two views, one for the admin and one for the user/customer.
+We have two views, one for the admin and one for the user/customer.
 
 
-The admin goes to http://localhost:3000/admin and he has the authority to manage everything
+The admin goes to http://localhost:3000/admin and he has the authority to manage everything (No authentication required)
 
 Users/Customers can go to http://localhost:3000 to view the articles.
 
-The Admin can manage articles, initating a new article or updating it in english, it automatically gets translated in German and saves in the database (Translation runs in async job using sidekiq in case of heavy traffic).
+The Admin can manage articles, initating a new article or updating it in english, it automatically gets translated in German and saves in the database.
 
 The updated translation can be seen either in rails admin or in localhost:3000 after changing the language.
 
