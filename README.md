@@ -1,10 +1,10 @@
 # README
 
-This a mini app for phraseapp at which it can manage articles.
+This is a mini app called mini phraseapp at which it can manage and translate articles.
 
 This project is using the following configuration:
 
-* Ruby version: 2.5.1
+* Ruby version: 2.4.1
 
 * Rails version: 5.2.2
 
@@ -17,7 +17,7 @@ The steps to use phraseapp:
 
 * clone project
 
-* Make sure ruby and rails versions are correct
+* Make sure versions of ruby and rails are correct
 
 * Make sure postgres is installed and running
 
@@ -47,12 +47,6 @@ The Admin can manage articles, initating a new article or updating it in english
 
 The updated translation can be seen either in rails admin or in localhost:3000 after changing the language.
 
-Note: English is the default language in this project at which it gets translated to other languages, any other language can not be translated to English for this release.
-
-
-
 For deploying on heroku consider doing the following:
 
 * Make sure aws.yml is present with the right configuration before proceeding.
-
-* You are good to go now
