@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Article, type: :model do
+describe Article, type: :model do
   context 'Question is not valid' do
     context 'Question is empty' do
       it 'should not save the article' do
