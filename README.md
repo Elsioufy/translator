@@ -55,6 +55,10 @@ The Admin can manage articles, initating a new article or updating it in english
 
 The updated translation can be seen either in admin or home page after changing the language.
 
+## Testing
+
+We use rspec, our main spec tests are found under: `spec/`, to run existing tests type: `rspec`
+
 ## Deployment
 
 For deploying on heroku:
