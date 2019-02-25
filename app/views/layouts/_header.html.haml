@@ -1,9 +1,6 @@
 // Header HTML
-.navbar.navbar-phraseapp
+.navbar.navbar-translator
   .navbar-header
-    = link_to root_path(locale: I18n.locale), class: 'navbar-brand' do
-      // Copyright logo to Phraseapp company (Used for this task only)
-      = image_tag 'phraseapp.png', class: 'phraseapp-logo', alt: 'logo', height: '20'
     .navbar-buttons
       %button.navbar-toggle.navbar-light{type: 'button', "data-toggle" => 'collapse', "data-target" => "#navbar_content"}
         %span.sr-only
@@ -22,7 +19,7 @@
         %a.dropdown-toggle.btn{"data-toggle": "dropdown"}
           = t(I18n.locale)
           %span.caret
-        %ul.dropdown-menu.navbar-phraseapp
+        %ul.dropdown-menu.navbar-translator
           - I18n.available_locales.each do |lang|
             %li
               = link_to t(lang), root_path(locale: lang)
