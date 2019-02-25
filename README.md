@@ -1,6 +1,6 @@
-## PhraseApp
+## Translator
 
-This is a mini app called mini phraseapp at which it can manage and translate articles.
+This is a mini app called mini translator at which it can manage and translate articles.
 
 ## This project is using the following configuration:
 
@@ -20,7 +20,7 @@ This is a mini app called mini phraseapp at which it can manage and translate ar
 * Redis for caching
 
 
-## The steps to use phraseapp:
+## The steps to use translator:
 
 * clone project
 

@@ -1,15 +1,15 @@
 development:
   <<: *default
-  database: phraseapp_development
-  username: phraseapp
+  database: translator_development
+  username: translator
   password:
   host: localhost
   pool: 15
 
 test:
   <<: *default
-  database: phraseapp_test
-  username: phraseapp
+  database: translator_test
+  username: translator
   password:
   host: localhost
   pool: 15

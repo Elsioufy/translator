@@ -2,11 +2,11 @@
 RailsAdmin.config do |config|
   # To easily run rails admin feature spec, we disabled basic authentication.
   # config.authorize_with do
-  #   authenticate_or_request_with_http_basic('Please login to Phrase App') do |username, password|
-  #     username == 'admin' && password == 'phraseAppDE2019'
+  #   authenticate_or_request_with_http_basic('Please login to Translator App') do |username, password|
+  #     username == 'admin' && password == 'translator'
   #   end
   # end
-  config.main_app_name = ["Phraseapp", "BackOffice"]
+  config.main_app_name = ["Translator", "BackOffice"]
   config.parent_controller = '::RailsAdminLocaleController'
   config.actions do
     dashboard
